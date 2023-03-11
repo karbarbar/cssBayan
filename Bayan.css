@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+html{
+      max-width: 1440px;
+      margin: auto;
+      background: wheat;
+ }
+.accordion{
+    padding:0;
+    margin: 0 auto;
+    width: 100%;
+    box-shadow: 5px 5px 10px 4px rgba(0,0,0,0.5);
+}
+.accordion .box{
+   display: none;
+}
+.box + label{
+    cursor: pointer;
+    display: block;
+    font-family: Verdana sans-serif;
+    border-bottom: 4px outset;
+    background-color: honeydew;
+}
+label:hover{
+    background-color: orange;
+}
+.box + label:hover{
+    opacity: 0.9;
+}
+.box + label:active{
+    background-color: green;
+}
+.box + label + div{
+    display: none;
+}
+.box:hover + label + div{
+    display: block;
+}
+.box:checked + label + div{
+    display: block;
+}
+
+

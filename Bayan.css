@@ -4,18 +4,21 @@
 html{
       max-width: 1440px;
       margin: auto;
-      background: wheat;
-       }
-body{
-    font-family: 'Roboto', sans-serif;
-    height: 100%;
+      height: 100%;
+
 }
+body{
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    background-color: darkgrey;
+
+  }
 .accordion{
     padding:0;
     margin: auto;
     width: 70%;
     overflow: hidden;
-    box-shadow: 0.5em 0.5em 1em 0.4em rgba(0,0,0,0.5);
+
 }
 
 .accordion .box{
@@ -102,4 +105,9 @@ input:hover + label::after{
 img{
     height: 25em;
     border: 0.1em solid black;
+}
+h1{
+    font-size: 3em;
+    font-weight: bold;
+    padding: 2em 0em 0em 5em;
 }

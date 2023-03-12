@@ -14,6 +14,19 @@ body {
     background-color: darkgrey;
 }
 
+img {
+    height: 25em;
+    border: 0.1em solid black;
+    transition: height 2s;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    padding: 2em 0 0 5em;
+}
+
+
 .accordion {
     padding: 0;
     margin: auto;
@@ -21,13 +34,13 @@ body {
     overflow: hidden;
 }
 
-.accordion .box {
+.accordion .radio_button {
     display: none;
     overflow: hidden;
     width: 100%;
 }
 
-.box + label {
+.radio_button + label {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -39,12 +52,12 @@ body {
     border-bottom: 0.2em outset;
 }
 
-.box + label:hover {
+.radio_button + label:hover {
     opacity: 0.9;
     border-bottom: none;
 }
 
-.box + label::after {
+.radio_button + label::after {
     content: "\002B";
     height: 1em;
     width: 1em;
@@ -61,27 +74,27 @@ label:hover + div {
     border-bottom: 0.4em outset;
 }
 
-.box + label:active {
+.radio_button + label:active {
     cursor: pointer;
     background-color: darkgrey;
     border-bottom: none;
 }
 
-.box + label + div {
+.radio_button + label + div {
     display: none;
 }
 
-.box:hover + label + div {
+.radio_button:hover + label + div {
     display: block;
     text-align: center;
     cursor: pointer;
 }
 
-.box:checked + label {
+.radio_button:checked + label {
     border-bottom: none;
 }
 
-.box:checked + label + div {
+.radio_button:checked + label + div {
     display: block;
     text-align: center;
     background-color: darkgrey;
@@ -105,14 +118,3 @@ input:hover + label::after {
     font-size: 1em;
 }
 
-img {
-    height: 25em;
-    border: 0.1em solid black;
-    transition: height 2s;
-}
-
-h1 {
-    font-size: 3em;
-    font-weight: bold;
-    padding: 2em 0 0 5em;
-}

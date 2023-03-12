@@ -5,31 +5,53 @@ html{
       max-width: 1440px;
       margin: auto;
       background: wheat;
- }
+       }
+body{
+    font-family: 'Roboto', sans-serif;
+}
 .accordion{
     padding:0;
     margin: 0 auto;
     width: 100%;
+     overflow: hidden;
     box-shadow: 5px 5px 10px 4px rgba(0,0,0,0.5);
 }
+
 .accordion .box{
    display: none;
+   overflow: hidden;
+   width: 100%;
 }
+
 .box + label{
     cursor: pointer;
-    display: block;
-    font-family: Verdana sans-serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    font-weight: bold;
+    background: yellowgreen;
+    font-family: 'Roboto', sans-serif ;
     border-bottom: 4px outset;
-    background-color: honeydew;
-}
-label:hover{
-    background-color: orange;
-}
+    }
 .box + label:hover{
     opacity: 0.9;
+    transition: all 0.2s;
 }
-.box + label:active{
+.box + label::after{
+    content: "\002B";
+
+}
+
+label:hover + div{
+    cursor: pointer;
+    background-color: orange;
+    transition: all 2s;
+    align-items: center;
+}
+
+.box +label:active{
     background-color: green;
+     transition: all 0.3s;
 }
 .box + label + div{
     display: none;
@@ -40,5 +62,9 @@ label:hover{
 .box:checked + label + div{
     display: block;
 }
-
+input:checked + label::after{
+    content: '\2715';
+    height: 1em;
+    width: 1em;
+}
 

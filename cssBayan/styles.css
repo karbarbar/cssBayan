@@ -17,7 +17,6 @@ body {
 img {
     height: 25em;
     border: 0.1em solid black;
-    transition: height 2s;
 }
 
 h1 {
@@ -26,19 +25,19 @@ h1 {
     padding: 2em 0 0 5em;
 }
 
-
 .accordion {
     padding: 0;
     margin: auto;
     width: 70%;
     overflow: hidden;
+
 }
 
 .accordion .radio_button {
     display: none;
     overflow: hidden;
     width: 100%;
-}
+    }
 
 .radio_button + label {
     cursor: pointer;
@@ -50,44 +49,42 @@ h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
     border-bottom: 0.2em outset;
+
+}
+.radio_button + label + div {
+    display: none;
 }
 
 .radio_button + label:hover {
     opacity: 0.9;
     border-bottom: none;
 }
-
+.radio_button + label:active {
+    cursor: pointer;
+    background-color: darkgrey;
+    border-bottom: none;
+}
 .radio_button + label::after {
     content: "\002B";
     height: 1em;
     width: 1em;
     font-size: 1em;
     font-weight: bold;
-    transition: transform 0.5s ease-in-out;
 }
 
 label:hover + div {
     cursor: pointer;
     background-color: darkgrey;
-    transition: 2s;
     align-items: center;
     border-bottom: 0.4em outset;
-}
 
-.radio_button + label:active {
-    cursor: pointer;
-    background-color: darkgrey;
-    border-bottom: none;
-}
-
-.radio_button + label + div {
-    display: none;
 }
 
 .radio_button:hover + label + div {
     display: block;
     text-align: center;
     cursor: pointer;
+    height: 30em;
 }
 
 .radio_button:checked + label {
@@ -108,7 +105,6 @@ input:checked + label::after {
     width: 1em;
     font-size: 1em;
     font-weight: bold;
-    transition: transform 0.5s ease-in-out;
 }
 
 input:hover + label::after {
@@ -117,4 +113,3 @@ input:hover + label::after {
     width: 1em;
     font-size: 1em;
 }
-

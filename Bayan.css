@@ -65,11 +65,22 @@ label:hover + div{
 }
 .box:hover + label + div{
     display: block;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+
     }
+.box:checked + label{
+    border-bottom: none;
+}
+
 .box:checked + label + div{
     display: block;
+    text-align: center;
+    transition: all 0.3s;
     background-color: darkgrey;
     border-bottom: 4px outset;
+    cursor: pointer;
 
 }
 input:checked + label::after{

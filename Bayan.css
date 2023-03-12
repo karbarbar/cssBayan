@@ -8,13 +8,14 @@ html{
        }
 body{
     font-family: 'Roboto', sans-serif;
+    height: 100%;
 }
 .accordion{
     padding:0;
     margin: auto;
     width: 70%;
     overflow: hidden;
-    box-shadow: 5px 5px 10px 4px rgba(0,0,0,0.5);
+    box-shadow: 0.5em 0.5em 1em 0.4em rgba(0,0,0,0.5);
 }
 
 .accordion .box{
@@ -31,7 +32,8 @@ body{
     font-weight: bold;
     background-color: darkgrey;
     font-family: 'Roboto', sans-serif ;
-    border-bottom: 4px outset;
+    font-size: 1.5em;
+    border-bottom: 0.2em outset;
     }
 .box + label:hover{
     opacity: 0.9;
@@ -43,6 +45,7 @@ body{
     height: 1em;
     width: 1em;
     font-size: 1em;
+    font-weight: bold;
 
 }
 
@@ -51,7 +54,7 @@ label:hover + div{
     background-color: darkgrey;
     transition: all 2s;
     align-items: center;
-    border-bottom: 4px outset;
+    border-bottom: 0.4em outset;
 }
 
 .box +label:active{
@@ -79,7 +82,7 @@ label:hover + div{
     text-align: center;
     transition: all 0.3s;
     background-color: darkgrey;
-    border-bottom: 4px outset;
+    border-bottom: 0.4em outset;
     cursor: pointer;
 
 }
@@ -88,6 +91,7 @@ input:checked + label::after{
     height: 1em;
     width: 1em;
     font-size: 1em;
+    font-weight: bold;
 }
 input:hover + label::after{
     content: '\2715';
@@ -95,4 +99,7 @@ input:hover + label::after{
     width: 1em;
     font-size: 1em;
 }
-
+img{
+    height: 25em;
+    border: 0.1em solid black;
+}

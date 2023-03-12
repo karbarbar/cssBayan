@@ -11,9 +11,9 @@ body{
 }
 .accordion{
     padding:0;
-    margin: 0 auto;
-    width: 100%;
-     overflow: hidden;
+    margin: auto;
+    width: 70%;
+    overflow: hidden;
     box-shadow: 5px 5px 10px 4px rgba(0,0,0,0.5);
 }
 
@@ -29,42 +29,59 @@ body{
     justify-content: space-between;
     padding: 1em;
     font-weight: bold;
-    background: yellowgreen;
+    background-color: darkgrey;
     font-family: 'Roboto', sans-serif ;
     border-bottom: 4px outset;
     }
 .box + label:hover{
     opacity: 0.9;
     transition: all 0.2s;
+    border-bottom: none;
 }
 .box + label::after{
     content: "\002B";
+    height: 1em;
+    width: 1em;
+    font-size: 1em;
 
 }
 
 label:hover + div{
     cursor: pointer;
-    background-color: orange;
+    background-color: darkgrey;
     transition: all 2s;
     align-items: center;
+    border-bottom: 4px outset;
 }
 
 .box +label:active{
-    background-color: green;
-     transition: all 0.3s;
+    cursor: pointer;
+    background-color: darkgrey;
+    transition: all 0.3s;
+    border-bottom: none;
 }
 .box + label + div{
     display: none;
 }
 .box:hover + label + div{
     display: block;
-}
+    }
 .box:checked + label + div{
     display: block;
+    background-color: darkgrey;
+    border-bottom: 4px outset;
+
 }
 input:checked + label::after{
     content: '\2715';
     height: 1em;
     width: 1em;
+    font-size: 1em;
+}
+input:hover + label::after{
+    content: '\2715';
+    height: 1em;
+    width: 1em;
+    font-size: 1em;
 }
 

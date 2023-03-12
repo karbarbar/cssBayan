@@ -1,112 +1,117 @@
-*{
+* {
     box-sizing: border-box;
 }
-html{
-      max-width: 1440px;
-      margin: auto;
-      height: 100%;
 
+html {
+    max-width: 1440px;
+    margin: auto;
+    height: 100%;
 }
-body{
+
+body {
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     background-color: darkgrey;
+}
 
-  }
-.accordion{
-    padding:0;
+.accordion {
+    padding: 0;
     margin: auto;
     width: 70%;
     overflow: hidden;
-
 }
 
-.accordion .box{
-   display: none;
-   overflow: hidden;
-   width: 100%;
+.accordion .box {
+    display: none;
+    overflow: hidden;
+    width: 100%;
 }
 
-.box + label{
+.box + label {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     padding: 1em;
     font-weight: bold;
     background-color: darkgrey;
-    font-family: 'Roboto', sans-serif ;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
     border-bottom: 0.2em outset;
-    }
-.box + label:hover{
+}
+
+.box + label:hover {
     opacity: 0.9;
-    transition: all 0.2s;
     border-bottom: none;
 }
-.box + label::after{
+
+.box + label::after {
     content: "\002B";
     height: 1em;
     width: 1em;
     font-size: 1em;
     font-weight: bold;
-
+    transition: transform 0.5s ease-in-out;
 }
 
-label:hover + div{
+label:hover + div {
     cursor: pointer;
     background-color: darkgrey;
-    transition: all 2s;
+    transition: 2s;
     align-items: center;
     border-bottom: 0.4em outset;
 }
 
-.box +label:active{
+.box + label:active {
     cursor: pointer;
     background-color: darkgrey;
-    transition: all 0.3s;
     border-bottom: none;
 }
-.box + label + div{
+
+.box + label + div {
     display: none;
 }
-.box:hover + label + div{
+
+.box:hover + label + div {
     display: block;
     text-align: center;
-    transition: all 0.3s;
     cursor: pointer;
+}
 
-    }
-.box:checked + label{
+.box:checked + label {
     border-bottom: none;
 }
 
-.box:checked + label + div{
+.box:checked + label + div {
     display: block;
     text-align: center;
-    transition: all 0.3s;
     background-color: darkgrey;
     border-bottom: 0.4em outset;
     cursor: pointer;
-
 }
-input:checked + label::after{
+
+input:checked + label::after {
     content: '\2715';
     height: 1em;
     width: 1em;
     font-size: 1em;
     font-weight: bold;
+    transition: transform 0.5s ease-in-out;
 }
-input:hover + label::after{
+
+input:hover + label::after {
     content: '\2715';
     height: 1em;
     width: 1em;
     font-size: 1em;
 }
-img{
+
+img {
     height: 25em;
     border: 0.1em solid black;
+    transition: height 2s;
 }
-h1{
+
+h1 {
     font-size: 3em;
     font-weight: bold;
     padding: 2em 0 0 5em;

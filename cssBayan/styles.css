@@ -113,3 +113,18 @@ input:hover + label::after {
     width: 1em;
     font-size: 1em;
 }
+@media (max-height: 1020px) {
+    body{
+        font-size: 1.5em;
+    }
+}
+@media (max-height: 891px) {
+    body{
+        font-size: 1.3em;
+    }
+}
+@media (max-height: 630px) {
+    body{
+        font-size: 1em;
+    }
+}

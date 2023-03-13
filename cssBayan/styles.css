@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    max-width: 1440px;
+    margin: auto;
+    height: 100%;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    background-color: darkgrey;
+}
+
+img {
+    height: 25em;
+    border: 0.1em solid black;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    padding: 2em 0 0 5em;
+}
+
+.accordion {
+    padding: 0;
+    margin: auto;
+    width: 70%;
+    overflow: hidden;
+
+}
+
+.accordion .radio_button {
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    }
+
+.radio_button + label {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    font-weight: bold;
+    background-color: darkgrey;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    border-bottom: 0.2em outset;
+
+}
+.radio_button + label + div {
+    display: none;
+}
+
+.radio_button + label:hover {
+    opacity: 0.9;
+    border-bottom: none;
+}
+.radio_button + label:active {
+    cursor: pointer;
+    background-color: darkgrey;
+    border-bottom: none;
+}
+.radio_button + label::after {
+    content: "\002B";
+    height: 1em;
+    width: 1em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+label:hover + div {
+    cursor: pointer;
+    background-color: darkgrey;
+    align-items: center;
+    border-bottom: 0.4em outset;
+
+}
+
+.radio_button:hover + label + div {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    height: 30em;
+}
+
+.radio_button:checked + label {
+    border-bottom: none;
+}
+
+.radio_button:checked + label + div {
+    display: block;
+    text-align: center;
+    background-color: darkgrey;
+    border-bottom: 0.4em outset;
+    cursor: pointer;
+}
+
+input:checked + label::after {
+    content: '\2715';
+    height: 1em;
+    width: 1em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+input:hover + label::after {
+    content: '\2715';
+    height: 1em;
+    width: 1em;
+    font-size: 1em;
+}
+@media (max-height: 1020px) {
+    body{
+        font-size: 1.5em;
+    }
+}
+@media (max-height: 891px) {
+    body{
+        font-size: 1.3em;
+    }
+}
+@media (max-height: 630px) {
+    body{
+        font-size: 1em;
+    }
+}
